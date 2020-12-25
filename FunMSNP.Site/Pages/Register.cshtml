@@ -1,0 +1,38 @@
+﻿@page
+@model FunMSNP.Site.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+@if (ViewData["Success"] != null)
+{
+    <div class="alert alert-success">
+        Created the account successfully.
+    </div>
+}
+
+@if (ViewData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @ViewData["Error"]
+    </div>
+}
+
+
+<form method="post">
+    <div class="form-group">
+        <label>E-mail address</label>
+        <input placeholder="E-mail" asp-for="Registry.EmailAddress" class="form-control" type="email" required />
+        <small class="form-text text-muted">MSN 1.0 (MSNP2) forces @@hotmail.com accounts by design.</small>
+        <span asp-validation-for="Registry.EmailAddress" class="text-danger"></span>
+    </div>
+    <div clsss="form-group">
+        <label>Password</label>
+        <input placeholder="Password" asp-for="Registry.Password" type="password" class="form-control" required />
+        <span asp-validation-for="Registry.Password" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-4">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>

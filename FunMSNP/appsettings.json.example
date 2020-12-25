@@ -1,0 +1,14 @@
+﻿{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Debug",
+            "System": "Information",
+            "Microsoft": "None"
+        }
+    },
+    "ConnectionStrings": {
+        "Database": "Server=IPADDRESS;Database=DATABASE;Uid=USER;Pwd=PASSWORD;"
+    },
+    "AES-Key": "36F695F217C28C4A72EF128961B43DE7",
+    "Switchboard": "127.0.0.1:1864"
+}
